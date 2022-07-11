@@ -1,0 +1,4 @@
+enum HttpError {
+  unauthorized,
+  unexpected,
+}
