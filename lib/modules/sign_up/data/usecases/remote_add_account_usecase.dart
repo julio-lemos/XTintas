@@ -7,11 +7,9 @@ import '../errors/errors.dart';
 
 class RemoteAddAccountUseCase implements IAddAccountUseCase {
   final IHttpClient httpClient;
-  final String url;
 
   RemoteAddAccountUseCase({
     required this.httpClient,
-    required this.url,
   });
 
   @override
@@ -21,7 +19,7 @@ class RemoteAddAccountUseCase implements IAddAccountUseCase {
     }
 
     try {
-      final response = await httpClient.post(url,
+      final response = await httpClient.post("https://62968cc557b625860610144c.mockapi.io/user",
           body: {"name": params.name, "email": params.email, "password": params.password});
 
       return right(

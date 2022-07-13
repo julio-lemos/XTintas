@@ -29,7 +29,7 @@ void main() {
       "password": "123456",
       "id": "9"
     });
-    sut = RemoteAddAccountUseCase(httpClient: httpClient, url: url);
+    sut = RemoteAddAccountUseCase(httpClient: httpClient);
   });
 
   test("should call httpClient with correct values", () async {

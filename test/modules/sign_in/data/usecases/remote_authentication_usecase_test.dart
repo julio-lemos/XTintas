@@ -21,7 +21,7 @@ void main() {
     params = AuthParams(
         email: faker.internet.email(), password: faker.internet.password());
     httpClient.mockSuccess();
-    sut = RemoteAuthenticationUseCase(httpClient: httpClient, url: url);
+    sut = RemoteAuthenticationUseCase(httpClient: httpClient);
   });
 
   test("should call httpClient with correct values", () async {

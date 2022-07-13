@@ -10,10 +10,8 @@ import 'sign_up/sign_up.module.dart';
 
 class AppModule extends Module {
   @override
-  List<Bind> get binds => [
-        Bind.singleton<Dio>((i) => Dio()),
-        Bind.singleton<IHttpClient>((i) => HttpClient())
-      ];
+  List<Bind> get binds =>
+      [Bind.singleton<Dio>((i) => Dio()), Bind.singleton<IHttpClient>((i) => HttpClient())];
 
   @override
   List<ModularRoute> get routes => [

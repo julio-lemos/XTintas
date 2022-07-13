@@ -10,8 +10,7 @@ class ProfileModule extends Module {
         Bind.factory<ProfileAdapters>((i) => ProfileAdapters()),
         Bind.factory(
           (i) => RemoteProfileUseCase(
-              httpClient: Modular.get<IHttpClient>(),
-              adapter: i<ProfileAdapters>()),
+              httpClient: Modular.get<IHttpClient>(), adapter: i<ProfileAdapters>()),
         )
       ];
 

@@ -16,8 +16,7 @@ class RemoteProfileUseCase implements IProfileUseCase {
 
   @override
   Future<ProfileEntity> getProfile() async {
-    final response = await httpClient
-        .get("https://62968cc557b625860610144c.mockapi.io/profile");
+    final response = await httpClient.get("https://62968cc557b625860610144c.mockapi.io/profile");
 
     return adapter.fromMap(response);
   }
