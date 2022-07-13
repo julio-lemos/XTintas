@@ -129,11 +129,11 @@ class SignInPage extends StatelessWidget {
                                   if (l is UnexpectedError) {
                                     ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
                                         content: Text(
-                                      "Houve um problema ao cadastrar.\nTente novamente mais tarde.",
+                                      "Houve um problema ao entrar.\nTente novamente mais tarde.",
                                     )));
                                   }
                                 }, (r) {
-                                  Modular.to.navigate("/profile");
+                                  Modular.to.navigate("/dashboard");
                                 });
                               }
                             },

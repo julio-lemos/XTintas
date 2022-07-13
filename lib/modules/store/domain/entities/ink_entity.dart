@@ -2,7 +2,7 @@ class InkEntity {
   String name;
   String imgUrl;
   int price;
-  List<Map<String, String>> benefits;
+  List<dynamic> benefits;
 
   InkEntity({
     required this.name,

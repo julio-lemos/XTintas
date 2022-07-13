@@ -18,6 +18,7 @@ dependencies:
   flutter_modular: ^5.0.3
   dio: ^4.0.6
   shared_preferences: ^2.0.15
+  carousel_slider: ^4.1.1
 
 dev_dependencies:
   flutter_test:
@@ -35,6 +36,8 @@ flutter:
   fonts:
     - family: OpenSans
       fonts:
+        - asset: assets/fonts/open_sans/OpenSans-Light.ttf
+          weight: 300
         - asset: assets/fonts/open_sans/OpenSans-Regular.ttf
           weight: 400
         - asset: assets/fonts/open_sans/OpenSans-Medium.ttf

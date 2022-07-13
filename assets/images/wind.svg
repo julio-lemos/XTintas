@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="22.828" viewBox="0 0 24 22.828">
+  <g id="Grupo_7439" data-name="Grupo 7439" transform="translate(-42 -116.086)">
+    <path id="weather" d="M11,10H0V8H11a1,1,0,1,0-.9-1.413L8.346,5.631A2.987,2.987,0,0,1,11,4c3.971,0,3.969,6,0,6Zm7,7a3,3,0,0,0-3-3H0v2H15a1,1,0,1,1-.9,1.413l-1.749.956A2.99,2.99,0,0,0,18,17Zm1.014-7.655A1.5,1.5,0,1,1,20.5,11H0v2H20.5a3.5,3.5,0,1,0-3.372-4.383l1.886.728Z" transform="translate(42 116)" fill="#161616"/>
+    <line id="Linha_324" data-name="Linha 324" x1="10" y2="22" transform="translate(49.5 116.5)" fill="none" stroke="#161616" stroke-width="2"/>
+  </g>
+</svg>

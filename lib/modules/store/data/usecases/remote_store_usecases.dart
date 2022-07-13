@@ -9,19 +9,17 @@ import '../../domain/usecases/usecases.dart';
 
 class RemoteStoreUseCases implements IStoreUseCase {
   final IHttpClient httpClient;
-  final String url;
   final StoreAdapters adapter;
 
   RemoteStoreUseCases({
     required this.httpClient,
-    required this.url,
     required this.adapter,
   });
 
   @override
   Future<Either<IStoreException, StoreEntity>> getPaints() async {
     try {
-      final response = await httpClient.get(url);
+      final response = await httpClient.get("https://62968cc557b625860610144c.mockapi.io/paints");
 
       return right(adapter.fromMap(response));
     } on HttpError catch (err, stackTrace) {

@@ -20,7 +20,7 @@ class _XTintasState extends State<XTintas> {
     final isAuth = prefs.getString('authToken')?.isNotEmpty;
 
     if (isAuth == true) {
-      Modular.to.navigate("/profile");
+      Modular.to.navigate("/dashboard/store");
     }
   }
 
