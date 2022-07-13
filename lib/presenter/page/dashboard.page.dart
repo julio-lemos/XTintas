@@ -21,6 +21,9 @@ class _DashboardPageState extends State<DashboardPage> {
       case 0:
         Modular.to.navigate('/dashboard/store');
         break;
+      case 1:
+        Modular.to.navigate("/dashboard/cart");
+        break;
       case 2:
         Modular.to.navigate("/dashboard/profile");
         break;

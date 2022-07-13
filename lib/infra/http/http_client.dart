@@ -6,6 +6,8 @@ abstract class IHttpClient {
   Future<dynamic> get(String url);
 
   Future<dynamic> post(String url, {required Map<String, dynamic> body});
+
+  Future<dynamic> delete(String url);
 }
 
 class HttpClient implements IHttpClient {
@@ -34,11 +36,26 @@ class HttpClient implements IHttpClient {
 
     return _handleResponse(response);
   }
+
+  @override
+  Future delete(String url) async {
+    Response response;
+
+    try {
+      response = await Modular.get<Dio>().delete(url);
+    } catch (err) {
+      throw HttpError.unexpected;
+    }
+
+    return _handleResponse(response);
+  }
 }
 
 _handleResponse(Response response) {
   switch (response.statusCode) {
     case 200:
+      return response.data;
+    case 201:
       return response.data;
     case 401:
       throw HttpError.unauthorized;

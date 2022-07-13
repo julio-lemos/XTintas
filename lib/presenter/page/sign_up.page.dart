@@ -163,10 +163,13 @@ class SignUpPage extends StatelessWidget {
 
                                 register.fold((l) {
                                   if (l is UnexpectedError) {
-                                    ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      const SnackBar(
                                         content: Text(
-                                      "Houve um problema ao cadastrar.\nTente novamente mais tarde.",
-                                    )));
+                                          "Houve um problema ao cadastrar.\nTente novamente mais tarde.",
+                                        ),
+                                      ),
+                                    );
                                   }
                                 }, (r) {});
                               }

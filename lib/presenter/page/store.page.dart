@@ -3,6 +3,7 @@ import 'package:dartz/dartz.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:xtintas/modules/cart/domain/usecases/cart_usecase.dart';
 import 'package:xtintas/modules/store/domain/entities/store_entity.dart';
 import 'package:xtintas/modules/store/domain/usecases/store_usecase.dart';
 
@@ -198,7 +199,18 @@ class StorePage extends StatelessWidget {
                                   Padding(
                                     padding: const EdgeInsets.symmetric(horizontal: 8.0),
                                     child: ElevatedButton(
-                                      onPressed: () {},
+                                      onPressed: () async {
+                                        await Modular.get<ICartUseCases>().addInCart(element);
+
+                                        // ignore: use_build_context_synchronously
+                                        ScaffoldMessenger.of(context).showSnackBar(
+                                          const SnackBar(
+                                            content: Text(
+                                              "Adicionado ao carrinho com sucesso.",
+                                            ),
+                                          ),
+                                        );
+                                      },
                                       style: ElevatedButton.styleFrom(
                                           primary: const Color(0xff5B4DA7),
                                           shape: RoundedRectangleBorder(
